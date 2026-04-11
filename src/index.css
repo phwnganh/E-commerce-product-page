@@ -1,0 +1,41 @@
+@import "tailwindcss";
+:root {
+  font-family: "Kumbh Sans", sans-serif;
+  @theme{
+    --color-grey-50: #F6F8FD;
+    --color-grey-100: #E4E9F2;
+    --color-grey-300: #C3CAD9;
+    --color-grey-500: #69707D;
+    --color-grey-950: #1D2026;
+
+    --color-orange-300: #FFAB6A;
+    --color-orange-500: #FF7E1B;
+
+    --text-preset-1: 44px;
+    --leading-preset-1: 48px;
+    --font-weight-preset-1: 700;
+
+    --text-preset-2: 28px;
+    --leading-preset-2: 32px;
+    --font-weight-preset-2: 700;
+
+    --text-preset-3: 16px;
+    --leading-preset-3: 26px;
+    --font-weight-preset-3: 700;
+
+    --text-preset-4: 15px;
+    --leading-preset-4: 26px;
+
+    --text-preset-5: 13px;
+    --leading-preset-5: 16px;
+    --tracking-preset-5: 2px;
+    --font-weight-preset-5: 700;
+
+    --text-preset-6: 12px;
+    --leading-preset-6: 15px;
+    --tracking-preset-6: 1,85px;
+    --font-weight-preset-6: 700;
+  }
+}
+
+
