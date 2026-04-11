@@ -35,6 +35,10 @@
     --leading-preset-6: 15px;
     --tracking-preset-6: 1,85px;
     --font-weight-preset-6: 700;
+
+    --radius-5: 5px;
+    --radius-6: 6px;
+    --radius-10: 10px;
   }
 }
 
