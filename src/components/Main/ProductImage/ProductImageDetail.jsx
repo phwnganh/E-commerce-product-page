@@ -18,7 +18,7 @@ const ProductImageDetail = ({productImgs, currentIndex, setCurrentIndex, onClose
 
                     <div className={"relative"}>
                         <button type={"button"} onClick={onClose} className={"absolute flex justify-center items-center w-10 h-10 right-0 top-0"}>
-                            <><img src={CloseIcon} alt={"close"}/></>
+                            <img src={CloseIcon} alt={"close"}/>
                         </button>
                         <img src={productImage.img} alt={productImage.title} className={"rounded-15 w-full"}/>
                         <button type={"button"} onClick={handlePrevious} aria-label={"click to view previous product img"} className={"absolute top-1/2 -left-5 flex justify-center items-center w-10 h-10 shrink-0 bg-white rounded-28"}>
@@ -30,7 +30,7 @@ const ProductImageDetail = ({productImgs, currentIndex, setCurrentIndex, onClose
                     </div>
                     <div className={"flex mt-4 gap-8 justify-center"}>
                         {productImgs.map((img, index) =>
-                            <button key={img.id} aria-label={"click to view product image"} aria-labelledby={img.title} type={"button"} onClick={() => setCurrentIndex(index)} className={`${currentIndex === index ? "opacity-75 ring-2 ring-orange-500" : ""} rounded-10 w-22 h-22`}>
+                            <button key={img.id} aria-label={"click to view product image"} aria-labelledby={img.title} type={"button"} onClick={() => setCurrentIndex(index)} className={`${currentIndex === index ? "opacity-75 ring-2 ring-orange-500" : ""} hover:opacity-50 rounded-10 w-22 h-22`}>
                                 <img id={img.title} src={img.imgThumbnail} alt={img.title} className={"rounded-10"}/>
                             </button>
                         )}

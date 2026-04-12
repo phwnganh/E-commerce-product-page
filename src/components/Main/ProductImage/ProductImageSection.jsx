@@ -70,7 +70,7 @@ const ProductImageSection = ({products}) => {
             </div>
             <div className={"hidden md:flex gap-8"}>
                 {PRODUCT_IMG_THUMBNAILS.map((img, index) =>
-                    <button key={img.id} aria-label={"click to view product image"} aria-labelledby={img.title} type={"button"} onClick={() => handleOpenProductImage(index)} className={`${currentIndex === index ? "opacity-75 ring-2 ring-orange-500" : ""} rounded-10 w-22 h-22`}>
+                    <button key={img.id} aria-label={"click to view product image"} aria-labelledby={img.title} type={"button"} onClick={() => handleOpenProductImage(index)} className={`${currentIndex === index ? "opacity-75 ring-2 ring-orange-500" : ""} hover:opacity-50 rounded-10 w-22 h-22`}>
                         <img id={img.title} src={img.imgThumbnail} alt={img.title} className={"rounded-10"}/>
                     </button>
                 )}
