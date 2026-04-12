@@ -1,11 +1,21 @@
 import Logo from "../../assets/logo.svg";
 import MenuIcon from "../../assets/icon-menu.svg";
 import { NavLink } from "react-router-dom";
+import {useState} from "react";
+import MenuDrawer from "./MenuDrawer.jsx";
 const Menu = () => {
+    const [openDrawer, setOpenDrawer] = useState(false)
+    const handleOpenDrawer = () => {
+        setOpenDrawer(true)
+    }
+    const handleCloseDrawer = () => {
+        setOpenDrawer(false)
+    }
   return (
-    <nav aria-label={"menu-site"} className={"flex items-center gap-14 h-full"}>
+    <nav aria-label={"menu-site"} className={"flex items-center gap-4 md:gap-14 h-full"}>
       <button
         type={"button"}
+        onClick={handleOpenDrawer}
         className={"flex md:hidden justify-center items-center"}
       >
         <img src={MenuIcon} alt="Menu" />
@@ -114,6 +124,7 @@ const Menu = () => {
           )}
         </NavLink>
       </div>
+        {openDrawer && <MenuDrawer onClose={handleCloseDrawer}/>}
     </nav>
   );
 };

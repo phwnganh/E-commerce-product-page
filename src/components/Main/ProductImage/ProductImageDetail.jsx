@@ -18,7 +18,7 @@ const ProductImageDetail = ({productImgs, currentIndex, setCurrentIndex, onClose
 
                     <div className={"relative"}>
                         <button type={"button"} onClick={onClose} className={"absolute flex justify-center items-center w-10 h-10 right-0 top-0"}>
-                            <img src={CloseIcon} alt={"close"}/>
+                            <><img src={CloseIcon} alt={"close"}/></>
                         </button>
                         <img src={productImage.img} alt={productImage.title} className={"rounded-15 w-full"}/>
                         <button type={"button"} onClick={handlePrevious} aria-label={"click to view previous product img"} className={"absolute top-1/2 -left-5 flex justify-center items-center w-10 h-10 shrink-0 bg-white rounded-28"}>
