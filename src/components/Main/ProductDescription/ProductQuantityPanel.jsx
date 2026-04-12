@@ -1,8 +1,6 @@
 import MinusIcon from '../../../assets/icon-minus.svg'
 import PlusIcon from '../../../assets/icon-plus.svg'
-import {useState} from "react";
-const ProductQuantityPanel = () => {
-    const [quantity, setQuantity] = useState(0)
+const ProductQuantityPanel = ({quantity, setQuantity}) => {
 
     const handleIncreaseQuantity = () => {
         setQuantity(quantity + 1)

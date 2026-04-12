@@ -1,7 +1,7 @@
 import {useState} from "react";
 import PreviousIcon from '../../assets/icon-previous.svg'
 import NextIcon from '../../assets/icon-next.svg'
-const ProductImageSection = () => {
+const ProductImageSection = ({products}) => {
     const PRODUCT_IMG_THUMBNAILS = [
         {
             id: 1,
