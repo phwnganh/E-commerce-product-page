@@ -1,5 +1,6 @@
 import {useState} from "react";
-
+import PreviousIcon from '../../assets/icon-previous.svg'
+import NextIcon from '../../assets/icon-next.svg'
 const ProductImageSection = () => {
     const PRODUCT_IMG_THUMBNAILS = [
         {
@@ -34,8 +35,17 @@ const ProductImageSection = () => {
     }
     return (
         <div className={"flex flex-col gap-8"}>
-            <div className={"md:max-w-md w-full"}>
+            <div className={"md:max-w-md w-full relative"}>
                 <img src={productImage.img} alt={productImage.title} className={"rounded-5 w-full"}/>
+                <div className={"absolute inset-0 flex items-center md:hidden justify-between px-4"}>
+                    <button type={"button"} aria-label={"click to view previous product img"} className={"flex justify-center items-center w-10 h-10 shrink-0 bg-white rounded-20"}>
+                        <img src={PreviousIcon} alt={"previous"}/>
+                    </button>
+
+                    <button type={"button"} aria-label={"click to view next product img"} className={"flex justify-center items-center w-10 h-10 shrink-0 bg-white rounded-20"}>
+                        <img src={NextIcon} alt={"next"}/>
+                    </button>
+                </div>
             </div>
             <div className={"hidden md:flex gap-8"}>
                 {PRODUCT_IMG_THUMBNAILS.map((img) =>
