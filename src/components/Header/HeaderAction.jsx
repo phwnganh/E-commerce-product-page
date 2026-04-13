@@ -13,8 +13,8 @@ const HeaderAction = () => {
     return (
         <div className={"flex items-center gap-6 sm:gap-12"}>
             <div className={"relative"}>
-                <button type={"button"} aria-label={"click to see cart items"} className={"flex justify-center items-center shrink-0"}>
-                    <img src={CartIcon} alt={"cart-icon"}/>
+                <button type={"button"} aria-label={"Open cart"} className={"flex justify-center items-center shrink-0"}>
+                    <img src={CartIcon} alt={"Cart"}/>
                 </button>
                 {totalQuantity > 0 &&
                     <div className={"absolute -top-1.5 -right-1.5 w-5 h-3 bg-orange-500 text-xs flex justify-center items-center rounded-6 text-white font-bold px-2"}>{totalQuantity}</div>
