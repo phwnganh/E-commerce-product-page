@@ -11,7 +11,7 @@ const NotificationDropdown = () => {
                 {cartItems.length > 0 ? (
                     <>
                         {cartItems.map((item, index) => (
-                            <div className={"px-6 flex flex-col gap-6 justify-center"}>
+                            <div key={index} className={"px-6 flex flex-col gap-6 justify-center"}>
                                 <div className={"flex items-center gap-4"}>
                                     <img src={item.image} alt={item.title} className={"rounded-sm w-12.5 h-12.5 "}/>
                                     <div className={"flex flex-col"}>
@@ -32,9 +32,8 @@ const NotificationDropdown = () => {
 
                     </>
                 ) :
-                    <div className={"flex flex-col gap-18 justify-center items-center"}>
-                    <p className={"text-preset-3 leading-preset-3 font-preset-3 text-grey-500 text-center"}>Your cart is empty.</p>
-                   <div></div>
+                    <div className={"flex flex-col justify-center items-center"}>
+                    <p className={"text-preset-3 leading-preset-3 font-preset-3 text-grey-500 my-12"}>Your cart is empty.</p>
                 </div>
                 }
             </div>
