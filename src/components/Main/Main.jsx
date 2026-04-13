@@ -3,9 +3,13 @@ import ProductImageSection from "./ProductImage/ProductImageSection.jsx";
 
 const Main = () => {
     return (
-        <main className={"flex flex-col md:flex-row items-center gap-12 md:gap-32"}>
+        <main className={"flex flex-col md:flex-row items-center gap-12 md:gap-32 px-22"}>
+            <div className={"min-w-0 flex-1"}>
                 <ProductImageSection/>
+            </div>
+            <div className={"min-w-0 flex-1"}>
                 <ProductDescriptionSection/>
+            </div>
         </main>
     );
 };

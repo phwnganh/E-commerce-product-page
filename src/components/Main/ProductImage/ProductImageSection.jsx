@@ -54,7 +54,7 @@ const ProductImageSection = ({products}) => {
     }
     return (
         <div className={"flex flex-col gap-8"}>
-            <div className={"md:max-w-md w-full relative"}>
+            <div className={"relative"}>
                 <button type={"button"} onClick={handleOpenProductImageDetail}>
                 <img src={productImage.img} alt={productImage.title} className={"rounded-5 w-full"}/>
                 </button>
@@ -70,8 +70,8 @@ const ProductImageSection = ({products}) => {
             </div>
             <div className={"hidden md:flex gap-8"}>
                 {PRODUCT_IMG_THUMBNAILS.map((img, index) =>
-                    <button key={img.id} aria-label={"click to view product image"} aria-labelledby={img.title} type={"button"} onClick={() => handleOpenProductImage(index)} className={`${currentIndex === index ? "opacity-75 ring-2 ring-orange-500" : ""} hover:opacity-50 rounded-10 w-22 h-22`}>
-                        <img id={img.title} src={img.imgThumbnail} alt={img.title} className={"rounded-10"}/>
+                    <button key={img.id} aria-label={"click to view product image"} aria-labelledby={img.title} type={"button"} onClick={() => handleOpenProductImage(index)} className={`hover:opacity-50 rounded-10 aspect-square ${currentIndex === index ? "opacity-75 ring-2 ring-orange-500" : ""}`}>
+                        <img id={img.title} src={img.imgThumbnail} alt={img.title} className={"rounded-10 h-full"}/>
                     </button>
                 )}
             </div>

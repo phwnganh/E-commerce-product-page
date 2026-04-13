@@ -13,7 +13,7 @@ const ProductQuantityPanel = ({quantity, setQuantity}) => {
         }
     }
     return (
-        <div className={"bg-grey-50 rounded-10 px-4 sm:px-6 md:px-7 py-4 flex items-center justify-between gap-26"}>
+        <div className={"bg-grey-50 rounded-10 px-4 sm:px-6 md:px-7 py-4 flex items-center justify-between gap-12"}>
             <button onClick={handleDecreaseQuantity} type={"button"} aria-label={"decrease quantity"} className={"flex justify-center items-center shrink-0 w-3 h-3"}>
                 <img src={MinusIcon} alt="Minus" />
             </button>
